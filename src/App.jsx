@@ -13,7 +13,7 @@ function App() {
       const user = { name, company, title, mobile };
       console.log(user);
 
-      fetch("http://localhost:5000/users", {
+      fetch("https://contact-book-server.vercel.app", {
          method: "POST",
          headers: {
             "Content-Type": "application/json",
@@ -81,8 +81,8 @@ function App() {
             />
          </form>
          <hr className="py-3" />
-         <Link to={'/users'}>
-         <button className="btn btn-primary w-80">Contact List</button>
+         <Link to={"/users"}>
+            <button className="btn btn-primary w-80">Contact List</button>
          </Link>
       </>
    );

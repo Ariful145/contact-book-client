@@ -14,7 +14,7 @@ const Update = () => {
       const user = { name, company, title, mobile };
       console.log(user);
 
-      fetch(`http://localhost:5000/users/${loadUser._id}`, {
+      fetch(`http://localhost:5000/${loadUser?._id}`, {
          method: "PUT",
          headers: {
             "Content-Type": "application/json",
@@ -50,7 +50,7 @@ const Update = () => {
             <input
                type="text"
                name="name"
-               defaultValue={loadUser.name}
+               defaultValue={loadUser?.name}
                placeholder="Name"
                className="input input-bordered my-3 input-md w-full max-w-xs"
             />{" "}
@@ -58,7 +58,7 @@ const Update = () => {
             <input
                type="text"
                name="company"
-               defaultValue={loadUser.company}
+               defaultValue={loadUser?.company}
                placeholder="Company"
                className="input input-bordered my-3 input-md w-full max-w-xs"
             />
@@ -66,7 +66,7 @@ const Update = () => {
             <input
                type="text"
                name="title"
-               defaultValue={loadUser.title}
+               defaultValue={loadUser?.title}
                placeholder="Title"
                className="input input-bordered my-3 input-md w-full max-w-xs"
             />
@@ -74,7 +74,7 @@ const Update = () => {
             <input
                type="number"
                name="mobile"
-               defaultValue={loadUser.mobile}
+               defaultValue={loadUser?.mobile}
                placeholder="Mobile"
                className="input input-bordered my-3 input-md w-full max-w-xs"
             />
